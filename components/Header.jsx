@@ -24,7 +24,9 @@ const Header = () => {
       }
     );
 
-    if (response.status === 200) setSuccess(true);
+    if (response.status === 200) {
+      setShow(true);
+    }
 
     const { products } = response.data;
 
@@ -33,12 +35,12 @@ const Header = () => {
         item.Name.toLowerCase().includes(query) ||
         item.Description.toLowerCase().includes(query)
     );
+    setLoading(false);
 
     console.log(filteredItems);
-    setItems(filteredItems);
 
-    setShow(true);
-    setLoading(false);
+    if (filteredItems.length > 0) setSuccess(true);
+    setItems(filteredItems);
   };
 
   return (
@@ -90,7 +92,10 @@ const Header = () => {
               <div className="mt-12">
                 <div className="flex flex-col space-y-12">
                   {items.map((i, idx) => (
-                    <div
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={i.link}
                       key={idx}
                       className="relative bg-white py-8 px-4 rounded-lg border-2 border-gray-400"
                     >
@@ -155,7 +160,7 @@ const Header = () => {
                           </div>
                         )}
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
