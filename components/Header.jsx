@@ -32,8 +32,8 @@ const Header = () => {
 
     const filteredItems = products.filter(
       (item) =>
-        item.Name.toLowerCase().includes(query) ||
-        item.Description.toLowerCase().includes(query)
+        item.Name.toLowerCase().includes(query.toLowerCase()) ||
+        item.Description.toLowerCase().includes(query.toLowerCase())
     );
     setLoading(false);
 
