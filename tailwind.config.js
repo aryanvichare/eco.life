@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
@@ -818,6 +818,13 @@ module.exports = {
       30: "30",
       40: "40",
       50: "50",
+    },
+    extend: {
+      colors: {
+        primary: "#1EBB90",
+        secondary: "#1B1B1B",
+        "primary-red": "#EB5D6B",
+      },
     },
   },
   variantOrder: [
