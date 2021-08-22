@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex flex-col items-center">
           <img className="w-64" src="/images/earth.svg" alt="Earth" />
           <h1 className="text-center font-extrabold text-primary text-4xl mt-16">
-            Find everything you need in most sustainable way
+            Find clothing you need in most sustainable way
           </h1>
           <div className="w-full max-w-screen-md mt-12">
             <div className="flex flex-row items-stretch space-x-8">
